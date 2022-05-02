@@ -1,0 +1,32 @@
+<body>
+  {{> mainContainer}}
+</body>
+
+<template name="mainContainer">
+  <div class="mainContainer">
+    <header>
+      <h1>Yo!</h1>
+    </header>
+
+    {{> form }}
+
+    <ul>
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="task">
+  <li>{{text}}</li>
+</template>
+
+
+
+<template name="form">
+  <form class="task-form">
+    <input type="text" name="text" placeholder="Send a Yo!">
+    <button type="submit">Yo!</button>
+  </form>
+</template>
